@@ -31,9 +31,15 @@ const logger = (severity) => {
   return logMessage;
 }
 
-const normalLogger = logger('NORMAL')
-const alertLogger = logger('WARNING')
-const severeLogger = logger('CRITICAL')
+const normalLogger = logger('NORMAL');
+const alertLogger = logger('WARNING');
+const severeLogger = logger('CRITICAL');
+
+normalLogger('This is just a normal loggger');
+normalLogger('Hocus Pocus');
+console.log('\n');
+
+alertLogger('Please have another look at this!');
 
 
 
