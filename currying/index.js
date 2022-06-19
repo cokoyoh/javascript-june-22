@@ -42,6 +42,22 @@ alertLogger('Please have another look at this!');
 
 console.log();
 severeLogger('This is serious!!!!');
+console.log();
 
 
 
+const f2 = (a) => {
+  console.log(`Received 1 variable ${a}`);
+  return (b) => {
+    console.log(`Received 2 variables ${a} and ${b}`);
+    return (c) => {
+      console.log(`Received 3 variables ${a}, ${b} and ${c}`);
+    }
+  }
+}
+
+const callWith = f2(1);
+
+const callAgainWith = callWith(2);
+
+callAgainWith(3);
