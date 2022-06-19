@@ -27,8 +27,7 @@
 
 
 const logger = (severity) => {
-  const logMessage = (message) => console.log(`${severity}: ${message}`);
-  return logMessage;
+ return (message) => console.log(`${severity}: ${message}`);
 }
 
 const normalLogger = logger('NORMAL');
@@ -40,6 +39,9 @@ normalLogger('Hocus Pocus');
 console.log('\n');
 
 alertLogger('Please have another look at this!');
+
+console.log();
+severeLogger('This is serious!!!!');
 
 
 
